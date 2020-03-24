@@ -1,0 +1,29 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int hight;
+    do
+    {
+        hight = get_int("Hight: ");
+    }
+    while (hight < 0 || hight > 8);
+
+    // "for" loop for hight
+    for (int i = 0; i < hight; i++)
+    {
+        // loop for adding dots
+        for (int a = 7; a > i; a--)
+        {
+            printf(" ");
+        }
+        // loop for adding steps
+        for (int j = 0; j <= i; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+                
+}
